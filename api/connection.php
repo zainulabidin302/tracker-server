@@ -2,14 +2,12 @@
 session_start();
 date_default_timezone_set('Asia/Karachi');
 
-header('Access-Control-Allow-Origin: *');  
-ini_set('session.cookie_domain', 'localhost' );
-// echo phpinfo();
-if ( !is_writable(session_save_path()) ) {
-    echo 'Session save path "'.session_save_path().'" is not writable!'; 
- }
-// error_reporting(-1);
-// ini_set('display_errors', true);
+header('Access-Control-Allow-Origin: http://localhost:8080');  
+header('Access-Control-Allow-Credentials: true');  
+
+error_reporting(-1);
+ini_set('display_errors', true);
+
 $con = mysqli_connect('getneural.com', 'tracker', 'tracker@123#', 'tracker');
 function q($qry) {
     global $con;
@@ -19,5 +17,9 @@ function q($qry) {
         $data[] = $row;
     }
     return $data;
-
 }
+
+function getCurrentUser() {
+    return unserialize($_SESSION['user'])[0];
+}
+?>

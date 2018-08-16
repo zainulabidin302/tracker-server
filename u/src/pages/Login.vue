@@ -45,6 +45,7 @@ import {
   UserCard
 } from '@/pages'
 import config from './../config.js'
+import axios from 'axios'
 export default {
   data() {
     return {
@@ -58,44 +59,28 @@ export default {
     UserCard
   },
   created() {
-    console.log('created')
-      fetch(config.api_url + "loggedin.php").then(res => res.json())
-      .then(res => {
-        if (res.message == 'ok') {
+    config.post('loggedin.php')
+      .then(a => {
+        if (a.message == 'ok') {
           this.$router.push({
-            path: '/'
+            path: '/dashboard'
           })
         }
-      }).catch(err => {
-        console.log(err)
       })
     },
   methods: {
-    
     login() {
-      this.loading = true
-      let form = new FormData()
-      form.append('username', this.username)
-      form.append('password', this.password)
-      let opts = {
-        method: 'POST',
-        body: form
-      }
-      let url = config.api_url + "login.php"
-      fetch(url, opts)
-      .then(res => res.json())
-      .then(res => {
-        this.loading = false
-        if (res.message == 'ok') {
+      config.post('login.php', {
+          username: this.username,
+          password: this.password
+        })
+        .then(a => {
           this.$router.push({
-            path: '/'
+            path: '/dashboard'
           })
-        }
-      })
-      .catch(err => {
-        this.loading = false
-        console.log(err)
-      })
+        })
+      
+      
     }
   },
 }

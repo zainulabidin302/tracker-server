@@ -197,7 +197,10 @@ export default{
     OrderedTable
   },
   created() {
-    fetch(config.api_url + 'dashboard_reporting.php').then(r => r.json())
+    config.post('dashboard_reporting.php', {
+      date_start: '2018-08-16',
+      date_end: '2018-08-16'
+    })
     .then(res => {
       console.log(res)
     })
