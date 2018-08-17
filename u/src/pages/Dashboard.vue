@@ -207,6 +207,8 @@ export default{
   },
   data () {
     return {
+      date_start: new Date('now'),
+      date_start: new Date('now'),
       dailySalesChart: {
         data: {
           labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
