@@ -9,11 +9,16 @@ import Maps from '@/pages/Maps.vue'
 import Notifications from '@/pages/Notifications.vue'
 import UpgradeToPRO from '@/pages/UpgradeToPRO.vue'
 import Login from '@/pages/Login.vue'
+import TeamLogin from '@/pages/TeamLogin.vue'
 
 const routes = [
   {
     path: '/login',
     component: Login
+  },
+    {
+    path: '/teamlogin',
+    component: TeamLogin
   },
   {
     path: '/',

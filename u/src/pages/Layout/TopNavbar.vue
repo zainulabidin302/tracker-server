@@ -38,12 +38,20 @@
                   <li><a href="#">Another One</a></li>
                 </ul>
               </drop-down>
+
             </md-list-item>
 
-            <md-list-item to="/user">
-              <i class="material-icons">person</i>
-              <p class="hidden-lg hidden-md">Profile</p>
+             <md-list-item to="/" class="dropdown">
+              <drop-down>
+                <a slot="title" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="material-icons">person</i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li><a href="#">Logout</a></li>
+                </ul>
+              </drop-down>
             </md-list-item>
+
           </md-list>
         </div>
       </div>

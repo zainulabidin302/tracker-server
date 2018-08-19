@@ -30,7 +30,7 @@
           :chart-type="'Bar'"
           data-background-color="red">
           <template slot="content">
-            <h4 class="title">Keyboard and Mouse Activity Report</h4>
+            <h4 class="title">Screenshots Timeline</h4>
               <p class="category">
                 Last Campaign Performance
               </p>
@@ -51,7 +51,7 @@
           :chart-type="'Line'"
           data-background-color="green">
           <template slot="content">
-            <h4 class="title">Screenshots Timeline</h4>
+            <h4 class="title">Timming</h4>
               <p class="category">
                 Last Campaign Performance
               </p>
@@ -66,83 +66,84 @@
         </chart-card>
       </div>
       <div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
-        <stats-card data-background-color="green">
-          <template slot="header">
-            <md-icon >store</md-icon>
-          </template>
+          <!-- <stats-card data-background-color="green">
+            <template slot="header">
+              <md-icon >store</md-icon>
+            </template>
 
-          <template slot="content">
-            <p class="category">Revenue</p>
-            <h3 class="title">$34,245</h3>
-          </template>
+            <template slot="content">
+              <p class="category">Revenue</p>
+              <h3 class="title">$34,245</h3>
+            </template>
 
-          <template slot="footer">
-            <div class="stats">
-                <md-icon>date_range</md-icon>
-                Last 24 Hours
-            </div>
-          </template>
-        </stats-card>
+            <template slot="footer">
+              <div class="stats">
+                  <md-icon>date_range</md-icon>
+                  Last 24 Hours
+              </div>
+            </template>
+          </stats-card>
+        </div>
+        <div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
+          <stats-card data-background-color="orange">
+            <template slot="header">
+              <md-icon >content_copy</md-icon>
+            </template>
+
+            <template slot="content">
+              <p class="category">Used Space</p>
+              <h3 class="title">49/50
+                  <small>GB</small>
+              </h3>
+            </template>
+
+            <template slot="footer">
+              <div class="stats">
+                <md-icon class="text-danger">warning</md-icon>
+                <a href="#pablo">Get More Space...</a>
+              </div>
+            </template>
+          </stats-card>
+        </div>
+        <div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
+          <stats-card data-background-color="red">
+            <template  slot="header">
+              <md-icon >info_outline</md-icon>
+            </template>
+
+            <template slot="content">
+              <p class="category">Fixed Issues</p>
+              <h3 class="title">75</h3>
+            </template>
+
+            <template slot="footer">
+              <div class="stats">
+                <md-icon>local_offer</md-icon>
+                Tracked from Github
+              </div>
+            </template>
+          </stats-card>
+        </div>
+        <div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
+          <stats-card data-background-color="blue">
+            <template  slot="header">
+              <i class="fab fa-twitter"></i>
+            </template>
+
+            <template slot="content">
+              <p class="category">Folowers</p>
+              <h3 class="title">+245</h3>
+            </template>
+
+            <template slot="footer">
+              <div class="stats">
+                <md-icon>update</md-icon>
+                Just Updated
+              </div>
+            </template>
+          </stats-card> -->
       </div>
-      <div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
-        <stats-card data-background-color="orange">
-          <template slot="header">
-            <md-icon >content_copy</md-icon>
-          </template>
 
-          <template slot="content">
-            <p class="category">Used Space</p>
-            <h3 class="title">49/50
-                <small>GB</small>
-            </h3>
-          </template>
-
-          <template slot="footer">
-            <div class="stats">
-              <md-icon class="text-danger">warning</md-icon>
-              <a href="#pablo">Get More Space...</a>
-            </div>
-          </template>
-        </stats-card>
-      </div>
-      <div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
-        <stats-card data-background-color="red">
-          <template  slot="header">
-            <md-icon >info_outline</md-icon>
-          </template>
-
-          <template slot="content">
-            <p class="category">Fixed Issues</p>
-            <h3 class="title">75</h3>
-          </template>
-
-          <template slot="footer">
-            <div class="stats">
-               <md-icon>local_offer</md-icon>
-               Tracked from Github
-            </div>
-          </template>
-        </stats-card>
-      </div>
-      <div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
-        <stats-card data-background-color="blue">
-          <template  slot="header">
-            <i class="fab fa-twitter"></i>
-          </template>
-
-          <template slot="content">
-            <p class="category">Folowers</p>
-            <h3 class="title">+245</h3>
-          </template>
-
-          <template slot="footer">
-            <div class="stats">
-               <md-icon>update</md-icon>
-               Just Updated
-            </div>
-          </template>
-        </stats-card>
-      </div>
       <div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50">
         <md-card>
           <md-card-header data-background-color="orange">
@@ -155,7 +156,7 @@
         </md-card>
       </div>
       <div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50">
-        <nav-tabs-card>
+        <!-- <nav-tabs-card>
           <template slot="content">
             <span class="md-nav-tabs-title">Tasks:</span>
             <md-tabs md-sync-route class="md-success" md-alignment="left">
@@ -173,7 +174,7 @@
               </md-tab>
             </md-tabs>
           </template>
-        </nav-tabs-card>
+        </nav-tabs-card> -->
       </div>
     </div>
   </div>
